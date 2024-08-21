@@ -31,6 +31,7 @@ const Descricao = styled.p`
   font-size: 14px;
 `;
 
+
 const Produto = ({ produto }) => {
   return (
     <CardContainer>
