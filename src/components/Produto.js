@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const CardContainer = styled.div`
   border: 1px solid #ddd;
   padding: 16px;
@@ -10,6 +11,9 @@ const CardContainer = styled.div`
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); //adciona borda no card
   background-color: #fff;
+  display: inline-block;
+  margin-left: 100px;
+  margin-top: 50px;
 `;
 
 const Imagem = styled.img`
@@ -23,7 +27,7 @@ const Imagem = styled.img`
 const Titulo = styled.h2`
   color: #333;
   font-size: 18px;
-  margin: 12px 0 8px;
+  margin: 12px 0 12px;
 `;
 
 const Descricao = styled.p`
@@ -35,8 +39,8 @@ const Descricao = styled.p`
 const Produto = ({ produto }) => {
   return (
     <CardContainer>
+       <Titulo>{produto.title}</Titulo>
       <Imagem src={produto.imageUrl} alt={produto.title} />
-      <Titulo>{produto.title}</Titulo>
       <Descricao>{produto.description}</Descricao>
     </CardContainer>
   );
